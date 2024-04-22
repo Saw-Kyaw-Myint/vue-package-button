@@ -5,8 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-library": "vue-cli-service build --target lib --name vue-elegant-button ./src/install.js",
     "lint": "vue-cli-service lint"
   },
+  "files": [
+    "dist/*"
+  ],
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^2.6.14"
