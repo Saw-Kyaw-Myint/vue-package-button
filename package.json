@@ -1,11 +1,12 @@
 {
-  "name": "vue-package-button",
+  "name": "@scm-saw-kyaw-myint/vue-package-button",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build-library": "vue-cli-service build --target lib --name vue-elegant-button ./src/install.js",
+    "build:design:button": "vue-cli-service build --target lib --name DesignButton --dest  dist/button --report ./src/components/button.js",
     "lint": "vue-cli-service lint"
   },
   "files": [
@@ -43,5 +44,9 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "author": "",
+  "license": "ISC"
 }
