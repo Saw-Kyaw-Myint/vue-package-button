@@ -1,12 +1,13 @@
 {
   "name": "@scm-saw-kyaw-myint/vue-package-button",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build-library": "vue-cli-service build --target lib --name vue-elegant-button ./src/install.js",
-    "build:design:button": "vue-cli-service build --target lib --name DesignButton --dest  dist/button --report ./src/components/button.js",
+    "build:design:button": "vue-cli-service build --target lib  --formats=umd --name DesignButton --dest  dist/button --report ./src/components/button.js",
+    "build:design:form": "vue-cli-service build --target lib  --formats=umd --name DesignForm --dest  dist/form --report ./src/components/form.js",
     "lint": "vue-cli-service lint"
   },
   "files": [

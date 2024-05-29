@@ -1,4 +1,14 @@
-/******/ (function() { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["DesignForm"] = factory();
+	else
+		root["DesignForm"] = factory();
+})((typeof self !== 'undefined' ? self : this), function() {
+return /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
 /******/ 	var __webpack_require__ = {};
@@ -44,17 +54,15 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  RedButton: function() { return /* reexport */ RedButton; },
-  VueElegentButton: function() { return /* reexport */ VueElegentButton; },
+  InputField: function() { return /* reexport */ InputField; },
   install: function() { return /* reexport */ install; }
 });
 
-// NAMESPACE OBJECT: ./src/components/Button/index.js
-var Button_namespaceObject = {};
-__webpack_require__.r(Button_namespaceObject);
-__webpack_require__.d(Button_namespaceObject, {
-  RedButton: function() { return RedButton; },
-  VueElegentButton: function() { return VueElegentButton; }
+// NAMESPACE OBJECT: ./src/components/Form/index.js
+var Form_namespaceObject = {};
+__webpack_require__.r(Form_namespaceObject);
+__webpack_require__.d(Form_namespaceObject, {
+  InputField: function() { return InputField; }
 });
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
@@ -74,38 +82,70 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/Button/RedButton.vue?vue&type=template&id=7e134728
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/Form/InputField.vue?vue&type=template&id=016108ad
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c('button', {
-    style: {
-      padding: '15px',
-      fontSize: '20px',
-      background: _vm.background,
-      color: _vm.color
+  return _c('label', [_vm._v(" " + _vm._s(_vm.label) + " "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.model,
+      expression: "model"
+    }],
+    staticClass: "input-design",
+    attrs: {
+      "type": "text",
+      "name": _vm.name
+    },
+    domProps: {
+      "value": _vm.model
+    },
+    on: {
+      "input": function ($event) {
+        if ($event.target.composing) return;
+        _vm.model = $event.target.value;
+      }
     }
-  }, [_vm._v(" " + _vm._s(_vm.text) + " ")]);
+  })]);
 };
 var staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/Button/RedButton.vue?vue&type=script&lang=js
-/* harmony default export */ var RedButtonvue_type_script_lang_js = ({
-  name: "RedButton",
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/Form/InputField.vue?vue&type=script&lang=js
+/* harmony default export */ var InputFieldvue_type_script_lang_js = ({
+  name: "InputField",
   props: {
-    background: {
-      default: "#FF0000"
+    label: {
+      type: String,
+      required: true
     },
-    color: {
-      default: "#fff"
+    value: {
+      type: String,
+      default: "github",
+      required: false
+    }
+  },
+  computed: {
+    name() {
+      return this.label.toLowerCase();
     },
-    text: {
-      default: "My github Red Button"
+    model: {
+      get() {
+        return this.value;
+      },
+      set(value) {
+        this.$emit("input", value);
+      }
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/Button/RedButton.vue?vue&type=script&lang=js
- /* harmony default export */ var Button_RedButtonvue_type_script_lang_js = (RedButtonvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./src/components/Form/InputField.vue?vue&type=script&lang=js
+ /* harmony default export */ var Form_InputFieldvue_type_script_lang_js = (InputFieldvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/Form/InputField.vue?vue&type=style&index=0&id=016108ad&prod&lang=css
+// extracted by mini-css-extract-plugin
+
+;// CONCATENATED MODULE: ./src/components/Form/InputField.vue?vue&type=style&index=0&id=016108ad&prod&lang=css
+
 ;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
@@ -204,16 +244,17 @@ function normalizeComponent(
   }
 }
 
-;// CONCATENATED MODULE: ./src/components/Button/RedButton.vue
+;// CONCATENATED MODULE: ./src/components/Form/InputField.vue
 
 
 
+;
 
 
 /* normalize component */
-;
+
 var component = normalizeComponent(
-  Button_RedButtonvue_type_script_lang_js,
+  Form_InputFieldvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -223,67 +264,14 @@ var component = normalizeComponent(
   
 )
 
-/* harmony default export */ var RedButton = (component.exports);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/Button/VueElegentButton.vue?vue&type=template&id=405721f2
-var VueElegentButtonvue_type_template_id_405721f2_render = function render() {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c('button', {
-    style: {
-      padding: '15px',
-      fontSize: '20px',
-      background: _vm.background,
-      color: _vm.color
-    }
-  }, [_vm._v(" " + _vm._s(_vm.text) + " ")]);
-};
-var VueElegentButtonvue_type_template_id_405721f2_staticRenderFns = [];
-
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/Button/VueElegentButton.vue?vue&type=script&lang=js
-/* harmony default export */ var VueElegentButtonvue_type_script_lang_js = ({
-  name: "VueElegantButton",
-  props: {
-    background: {
-      default: "#456099"
-    },
-    color: {
-      default: "#fff"
-    },
-    text: {
-      default: "My  github testing Button"
-    }
-  }
-});
-;// CONCATENATED MODULE: ./src/components/Button/VueElegentButton.vue?vue&type=script&lang=js
- /* harmony default export */ var Button_VueElegentButtonvue_type_script_lang_js = (VueElegentButtonvue_type_script_lang_js); 
-;// CONCATENATED MODULE: ./src/components/Button/VueElegentButton.vue
+/* harmony default export */ var InputField = (component.exports);
+;// CONCATENATED MODULE: ./src/components/Form/index.js
 
 
-
-
-
-/* normalize component */
-;
-var VueElegentButton_component = normalizeComponent(
-  Button_VueElegentButtonvue_type_script_lang_js,
-  VueElegentButtonvue_type_template_id_405721f2_render,
-  VueElegentButtonvue_type_template_id_405721f2_staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* harmony default export */ var VueElegentButton = (VueElegentButton_component.exports);
-;// CONCATENATED MODULE: ./src/components/Button/index.js
-
-
-
-;// CONCATENATED MODULE: ./src/components/button.js
+;// CONCATENATED MODULE: ./src/components/form.js
 
 const install = Vue => {
-  Object.values(Button_namespaceObject).filter(component => component.name).forEach(component => {
+  Object.values(Form_namespaceObject).filter(component => component.name).forEach(component => {
     Vue.component(component.name, component);
   });
 };
@@ -292,7 +280,8 @@ const install = Vue => {
 
 
 
-module.exports = __webpack_exports__;
+/******/ 	return __webpack_exports__;
 /******/ })()
 ;
-//# sourceMappingURL=DesignButton.common.js.map
+});
+//# sourceMappingURL=DesignForm.umd.js.map

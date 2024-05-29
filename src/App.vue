@@ -3,6 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <VueElegentButton />
+    <InputField label="title"/>
     <RedButton />
   </div>
 </template>
@@ -11,6 +12,7 @@
 import HelloWorld from "./components/HelloWorld.vue";
 import VueElegentButton from "./components/Button/VueElegentButton.vue";
 import RedButton from "./components/Button/RedButton.vue";
+import InputField from "./components/Form/InputField.vue";
 
 export default {
   name: "App",
@@ -18,6 +20,7 @@ export default {
     HelloWorld,
     VueElegentButton,
     RedButton,
+    InputField,
   },
 };
 </script>
