@@ -22,7 +22,7 @@ export default {
       default: "#fff",
     },
     text: {
-      default: "My github Red Button",
+      default: "My github saw Red Button",
     },
   },
 };
