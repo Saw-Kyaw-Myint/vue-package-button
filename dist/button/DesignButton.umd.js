@@ -55,6 +55,7 @@ __webpack_require__.r(__webpack_exports__);
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
   RedButton: function() { return /* reexport */ RedButton; },
+  TestBranchButton: function() { return /* reexport */ TestBranchButton; },
   VueElegentButton: function() { return /* reexport */ VueElegentButton; },
   install: function() { return /* reexport */ install; }
 });
@@ -64,6 +65,7 @@ var Button_namespaceObject = {};
 __webpack_require__.r(Button_namespaceObject);
 __webpack_require__.d(Button_namespaceObject, {
   RedButton: function() { return RedButton; },
+  TestBranchButton: function() { return TestBranchButton; },
   VueElegentButton: function() { return VueElegentButton; }
 });
 
@@ -286,7 +288,60 @@ var VueElegentButton_component = normalizeComponent(
 )
 
 /* harmony default export */ var VueElegentButton = (VueElegentButton_component.exports);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/Button/TestBranchButton.vue?vue&type=template&id=55d4628a
+var TestBranchButtonvue_type_template_id_55d4628a_render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('button', {
+    style: {
+      padding: '15px',
+      fontSize: '20px',
+      background: _vm.background,
+      color: _vm.color
+    }
+  }, [_vm._v(" test brnch " + _vm._s(_vm.text) + " ")]);
+};
+var TestBranchButtonvue_type_template_id_55d4628a_staticRenderFns = [];
+
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/Button/TestBranchButton.vue?vue&type=script&lang=js
+/* harmony default export */ var TestBranchButtonvue_type_script_lang_js = ({
+  name: "TestBranchButton",
+  props: {
+    background: {
+      default: "#456099"
+    },
+    color: {
+      default: "#fff"
+    },
+    text: {
+      default: "My  github test branch Button"
+    }
+  }
+});
+;// CONCATENATED MODULE: ./src/components/Button/TestBranchButton.vue?vue&type=script&lang=js
+ /* harmony default export */ var Button_TestBranchButtonvue_type_script_lang_js = (TestBranchButtonvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./src/components/Button/TestBranchButton.vue
+
+
+
+
+
+/* normalize component */
+;
+var TestBranchButton_component = normalizeComponent(
+  Button_TestBranchButtonvue_type_script_lang_js,
+  TestBranchButtonvue_type_template_id_55d4628a_render,
+  TestBranchButtonvue_type_template_id_55d4628a_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var TestBranchButton = (TestBranchButton_component.exports);
 ;// CONCATENATED MODULE: ./src/components/Button/index.js
+
 
 
 
