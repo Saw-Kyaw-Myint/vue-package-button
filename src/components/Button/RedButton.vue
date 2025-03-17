@@ -2,7 +2,7 @@
   <button
     :style="{
       padding: '15px',
-      fontSize: '20px',
+      fontSize: '30px',
       background: background,
       color: color,
     }"
